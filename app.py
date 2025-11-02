@@ -43,8 +43,11 @@ RAZORPAY_KEY_SECRET = "CRq63kgfFXVlnnG7dnxjhMzF"
 
 razorpay_client = razorpay.Client(auth=(RAZORPAY_KEY_ID, RAZORPAY_KEY_SECRET))
 @app.route('/')
-def index():
-    return "Flask backend is live 🚀"
+def home():
+    return jsonify({
+        "message": "Backend is running successfully 🚀",
+        "status": "OK"
+    })
 # ---------- USER AUTH (REGISTER / LOGIN) ----------
 @app.route("/register", methods=["POST"])
 def register_user():
