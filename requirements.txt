@@ -9,3 +9,7 @@ flask
 flask-cors
 deep-translator
 openai
+pandas
+razorpay
+torch
+pillow
